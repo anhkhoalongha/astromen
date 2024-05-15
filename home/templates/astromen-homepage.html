@@ -74,9 +74,6 @@
 		integrity="sha384-aSMPPD5rPl0fgz+E13+TwSoM9HoTyDTSvhl/6nJ4oUlVUuUcTPc8EQd8pElowaCp"></script>
 	<script async="" src="{% static 'atromen-assets/gtm.js' %}"></script>
 
-
-
-
 	<link rel="stylesheet" as="style" onload="this.rel = 'stylesheet'"
 		href="{% static 'atromen-assets/bootstrap.min.css' %}">
 
@@ -99,6 +96,8 @@
 	<link rel="stylesheet" href="{% static 'assets/css/problem_session.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/tinhtrang.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/product_intro.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/price.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/footer.css' %}">
 	<style id="inert-style">
 		[inert] {
 			pointer-events: none;
@@ -111,6 +110,11 @@
 			-webkit-user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
+		}
+
+		li,
+		a {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		}
 	</style>
 </head>
@@ -352,7 +356,7 @@
 					</p>
 					<div class="row tinhtrang-detail-column">
 						<div class="col-xs-12 col-sm-4 thattran_item tinhtrang-text-column">
-							
+
 							<h3 class="mod_title_trang">Rối loạn và giảm ham muốn</h3>
 							<div class="intro">
 								<ul>
@@ -378,6 +382,8 @@
 			</div>
 		</div>
 	</session>
+
+
 
 	<!-- <div class="section_nguyennhan mt_20">
 		<div class="container">
@@ -468,60 +474,161 @@
 			</div>
 		</div>
 	</div> -->
-
-	<div class="section_hoisinh mt_20 product-intro ">
-		<div class="container">
-			<div class="widget  pb_30 html">
-				<div class="title-logo-product-intro">
-					<img class="img-production-intro" src="{% static 'assets\img\logoAstromen.jpg' %}" alt="">
-					<!-- <div class="title-text-product-intro-container"> -->
+	<session class="product-intro-session">
+		<div class="section_hoisinh mt_20 product-intro ">
+			<div class="container">
+				<div class="widget  pb_30 html">
+					<div class="title-logo-product-intro">
+						<img class="img-production-intro" src="{% static 'assets\img\logoAstromen.jpg' %}" alt="">
+						<!-- <div class="title-text-product-intro-container"> -->
 						<h2
 							class="mod_title text-center cl_brand  pb_10 font_hel_b sz_21 mb_15 mb_10 product-intro-title">
 							BỨC PHÁ GIỚI HẠN - CỨNG CÁP DÀI LÂU
 						</h2>
-					<!-- </div> -->
-				</div>
-				<div class="row flex_row ">
-					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 flex_column img-produc_intro-container">
-						<img loading="lazy" class="img-responsive product-intro-img "
-							src="{% static 'assets/img/hop-thuoc-astromen-bg-white.png' %}" alt="sâm astromen"
-							width="700" height="705">
+						<!-- </div> -->
 					</div>
-					<div class="col-xs-12 col-sm-6 flex_column">
-						<div class="item_hoisinhhongdo">
-							<ul>
-								<li class="item-hoisinhhongdo-text">
-									Không còn tự ti - Chỉ còn tự tin
-								</li>
-
-							</ul>
+					<div class="row flex_row ">
+						<div
+							class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 flex_column img-produc_intro-container">
+							<img loading="lazy" class="img-responsive product-intro-img "
+								src="{% static 'assets/img/hop-thuoc-astromen-bg-white.jpg' %}" alt="sâm astromen"
+								width="700" height="705">
 						</div>
-						<div class="item_hoisinhhongdo ">
+						<div class="col-xs-12 col-sm-6 flex_column">
 							<div class="item_hoisinhhongdo">
 								<ul>
 									<li class="item-hoisinhhongdo-text">
-										Không còn một đêm giới hạn chỉ có những đêm hạnh phúc vô hạn
+										Không còn tự ti - Chỉ còn tự tin
 									</li>
 
 								</ul>
 							</div>
-						</div>
-						<div class="item_hoisinhhongdo ">
-							<div class="item_hoisinhhongdo">
-								<ul>
-									<li class="item-hoisinhhongdo-text">
-										Giúp giảm triệu chứng đau lưng mỏi gối, sinh lý yếu do thận kém.
-									</li>
-								</ul>
+							<div class="item_hoisinhhongdo ">
+								<div class="item_hoisinhhongdo">
+									<ul>
+										<li class="item-hoisinhhongdo-text">
+											Không còn một đêm giới hạn chỉ có những đêm hạnh phúc vô hạn
+										</li>
+
+									</ul>
+								</div>
+							</div>
+							<div class="item_hoisinhhongdo ">
+								<div class="item_hoisinhhongdo">
+									<ul>
+										<li class="item-hoisinhhongdo-text">
+											Giúp giảm triệu chứng đau lưng mỏi gối, sinh lý yếu do thận kém.
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
+					<div class="divider"></div>
 				</div>
-				<div class="divider"></div>
 			</div>
 		</div>
-	</div>
+	</session>
 
+	<session class="product-price-session">
+		<div class="section_hoisinh mt_20 product-intro">
+			<div class="container">
+				<div class="widget  pb_30 html">
+					<div class="row flex_row ">
+						<div
+							class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 flex_column img-produc_intro-container">
+							<img loading="lazy" class="img-responsive product-intro-img "
+								src="{% static 'assets/img/couple-kiss.jpg' %}" alt="sâm astromen" width="700"
+								height="705">
+						</div>
+						<div class="col-xs-12 col-sm-6 flex_column">
+							<div class="price-container-title">
+								<p class="price-title-text">Chỉ với 26.000 đồng mỗi ngày </p>
+								<p style="margin-left: 20px;" class="price-title-text">"Chàng VUI Nàng
+									THÍCH"</p>
+							</div>
+							<div class="item_hoisinhhongdo ">
+								<div class="item_hoisinhhongdo price-content-container">
+									<div class="price-product_content-text "><span
+											class="price-product_content-brand">Astromen</span> Sản phẩm này hiện đã có
+										mặt tại tất cả các
+										hiệu thuốc trên toàn quốc.</div>
+								</div>
+							</div>
+							<div class="item_hoisinhhongdo ">
+								<div class="item_hoisinhhongdo price-content-container">
+									<div class="price-product_content-text ">Đơn giá: <span
+											class="product_content-price_unit">390.000 đồng/ hộp</span>
+									</div>
+									<div class="price-product_content-text ">
+										1 hộp 5 vỉ x 6 viên
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="divider"></div>
+				</div>
+			</div>
+		</div>
+	</session>
+
+
+	<session class="tinhchat">
+		<div class="section_hoisinh mt_20 product-intro ">
+			<div class="container">
+				<div class="widget  pb_30 html">
+					<div class="title-logo-product-intro">
+						<img class="img-production-intro" src="{% static 'assets\img\logoAstromen.jpg' %}" alt="">
+						<!-- <div class="title-text-product-intro-container"> -->
+						<h2
+							class="mod_title text-center cl_brand  pb_10 font_hel_b sz_21 mb_15 mb_10 product-intro-title">
+							BỨC PHÁ GIỚI HẠN - CỨNG CÁP DÀI LÂU
+						</h2>
+						<!-- </div> -->
+					</div>
+					<div class="row flex_row ">
+						<div
+							class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 flex_column img-produc_intro-container">
+							<img loading="lazy" class="img-responsive product-intro-img "
+								src="{% static 'assets/img/hop-thuoc-astromen-bg-white.jpg' %}" alt="sâm astromen"
+								width="700" height="705">
+						</div>
+						<div class="col-xs-12 col-sm-6 flex_column">
+							<div class="item_hoisinhhongdo">
+								<ul>
+									<li class="item-hoisinhhongdo-text">
+										Không còn tự ti - Chỉ còn tự tin
+									</li>
+
+								</ul>
+							</div>
+							<div class="item_hoisinhhongdo ">
+								<div class="item_hoisinhhongdo">
+									<ul>
+										<li class="item-hoisinhhongdo-text">
+											Không còn một đêm giới hạn chỉ có những đêm hạnh phúc vô hạn
+										</li>
+
+									</ul>
+								</div>
+							</div>
+							<div class="item_hoisinhhongdo ">
+								<div class="item_hoisinhhongdo">
+									<ul>
+										<li class="item-hoisinhhongdo-text">
+											Giúp giảm triệu chứng đau lưng mỏi gối, sinh lý yếu do thận kém.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</session>
 	<!-- 
 	<div class="section_tinhchat mt_20 ">
 		<div class="container">
@@ -1733,8 +1840,8 @@
 			</div>
 		</div>
 	</div>
-
-	<div id="footer" class="pt_40 pb_40">
+ -->
+	<!-- <div id="footer" class="pt_40 pb_40">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 mb_20">
@@ -1754,7 +1861,7 @@
 							<img src="{% static 'atromen-assets/dia-chi-astromen-moi.png' %}" width="12" height="18">
 							180 Trường Chinh, phường Khương Thượng, quận Đống Đa, TP. Hà
 							Nội<br>
-							<img src="{% static 'atromen-assets/so-dien-thoai-alipas-moi.png' %}" width="12"
+							<img src="{% static 'atromen-assets/so-dien-thoai-astromen-moi.png' %}" width="12"
 								height="18"><a href="tel:+842871026089" style="color:#fff;"> (84 28) 7102
 								6089</a><br>
 							<img src="{% static 'atromen-assets/email-alipas-moi.png' %}" width="12" height="18">
@@ -1913,6 +2020,74 @@
 
 		</div>
 	</div> -->
+
+	<footer class="footer text-white text-center text-lg-start">
+		<!-- Grid container -->
+		<div class="container p-4">
+			<!--Grid row-->
+			<div class="row">
+				<!--Grid column-->
+				<div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+					<img class="logo-img-astro-footer" src="{% static 'assets\img\logoAstromen.jpg' %}" alt="">
+
+					<ul class="list-unstyled mb-0">
+						<li>
+							<p><b>Công ty Cổ phần Asta Healthcare USA</b>​</p>
+						</li>
+						<li>
+							<p>Lô D1, D2, D6, D7, D8 KCN Hòa Hiệp1,​ Hòa Hiệp Bắc, TX. Đông Hòa, Phú Yên</p>
+						</li>
+						<li>
+							<a href="#!" class="text-white">0257.3686939​</a>
+						</li>
+						<li>
+							<a href="#!" class="text-white">cskh@astahealthcare.com</a>
+						</li>
+					</ul>
+				</div>
+				<!--Grid column-->
+
+				<!--Grid column-->
+				<div class="col-lg-3 col-md-6 mb-4 mb-md-0 col-footer">
+					<h5 class="text-uppercase">THÔNG TIN GIỚI THIỆU​</h5>
+
+					<ul class="list-unstyled mb-0">
+						<li>
+							<a href="#!" class="text-white">Giới thiệu</a>
+						</li>
+						<li>
+							<a href="#!" class="text-white">Địa chỉ mua hàng</a>
+						</li>
+						<li>
+							<a href="#!" class="text-white">Điều khoản sử dụng​</a>
+						</li>
+						<li>
+							<a href="#!" class="text-white">Miễn trừ trách nhiệm</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4 mb-md-0 col-footer col-footer-3rd">
+
+
+					<ul class="list-unstyled mb-0">
+						<li>
+							<img class="logo-img-astro-footer cart-item-footer" src="{% static 'assets\img\btn-order.png' %}" alt="">
+						</li>
+						<li>
+							<img class="logo-img-astro-footer" src="{% static 'assets\img\hotline-banner.png' %}"
+								alt="">
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<!-- </div>
+		<div class="text-center p-3" style="background-color: #044750;">
+			© 2020 Copyright:
+			<a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+		</div> -->
+			<!-- Copyright -->
+	</footer>
 
 	<div class="footer_message hidden-lg hidden-md hidden-sm pt_5 pb_5">
 		<div class="row flex_row_xs">

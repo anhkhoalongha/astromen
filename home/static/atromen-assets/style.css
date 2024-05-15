@@ -3807,7 +3807,7 @@ h4 {
 }
 
 .cl_green {
-    color: #006680;
+    color: #004650;
 }
 
 .cl_yelow_dam {
@@ -3815,7 +3815,7 @@ h4 {
 }
 
 .bg_green {
-    background: #006680;
+    background: #004650;
 }
 
 .bg_green_dam {
@@ -3827,7 +3827,7 @@ h4 {
 }
 
 .bg_blue_gradient {
-    background: linear-gradient(180deg, #00AFBD 0%, #006680 100%);
+    background: linear-gradient(180deg, #00AFBD 0%, #004650 100%);
 }
 
 .bg_black {
@@ -4099,7 +4099,7 @@ header {
 }
 
 footer {
-    background: #006680;
+    background: #004650;
 }
 
 .title_brand {
@@ -4249,7 +4249,7 @@ footer {
 
 .section_one .wrapper_bg_white .box_three_item .item {
     height: 100%;
-    background: linear-gradient(180deg, #00AFBD 0%, #006680 100%);
+    background: linear-gradient(180deg, #00AFBD 0%, #004650 100%);
     border: 1px solid #00AFBD;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -4374,7 +4374,7 @@ footer {
 
 .table_element {
     border-radius: 20px;
-    background: linear-gradient(180deg, #00AFBD 0%, #006680 100%);
+    background: linear-gradient(180deg, #00AFBD 0%, #004650 100%);
 }
 
 .line_bottom_item_white_affter {
@@ -4403,7 +4403,7 @@ footer {
 
 .box_item_bg_gradient_green {
     position: relative;
-    background: linear-gradient(180deg, #00AFBD 0%, #006680 100%);
+    background: linear-gradient(180deg, #00AFBD 0%, #004650 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
@@ -4567,7 +4567,7 @@ ul.list_style_none>li {
 }
 
 .form_datcauhoituvan {
-    background: linear-gradient(180deg, #00AFBD 0%, #006680 100%);
+    background: linear-gradient(180deg, #00AFBD 0%, #004650 100%);
     border: 1px solid #00AFBD;
     border-radius: 10px;
 }
@@ -4619,7 +4619,7 @@ ul.list_style_none>li {
 }
 
 .btn_viewmore_question span {
-    background: linear-gradient(180deg, #00AFBD 0%, #006680 100%);
+    background: linear-gradient(180deg, #00AFBD 0%, #004650 100%);
     font-size: 20px;
     padding: 5px 30px;
     margin: 2px;
@@ -12587,7 +12587,7 @@ body table:not([border="0"]) {
 }
 
 .img-hotline-banner {
-    scale: 1.3;
+    scale: 1.8;
 }
 
 .img-banner-header {
