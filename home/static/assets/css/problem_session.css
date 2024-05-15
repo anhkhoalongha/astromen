@@ -1,6 +1,6 @@
 .problem-container {
   display: flex;
-  height: 50em;
+  height: auto;
   max-width: 100%;
   width: auto;
   align-items: center;
@@ -93,6 +93,7 @@
 .content-problem {
   margin-top: 15%;
   text-align: center;
+  margin-bottom: 15%;
 }
 
 .content-problem > p {
@@ -109,7 +110,9 @@
   .cungvamem > .va > p {
       font-size: 8vw; /* Adjust the font size for smaller screens */
   }
-
+  .content-problem{
+    width: 100%;
+  }
   .content-problem > p {
       font-size: 120%;
   }
@@ -121,7 +124,7 @@
       font-size: 30vw; /* Adjust the font size for smaller screens */
   }
 
-  .cungvamem > .cung > p{
+  .cungvamem > .cung > p {
     margin-top: 11%;
   }
 
@@ -131,5 +134,24 @@
 
   .content-problem > p {
       font-size: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .cungvamem > .cung > p, 
+  .cungvamem > .mem > p {
+      font-size: 35vw; /* Adjust the font size for very small screens */
+  }
+
+  .cungvamem > .cung > p {
+    margin-top: 15%;
+  }
+
+  .cungvamem > .va > p {
+      font-size: 15vw; 
+  }
+
+  .content-problem > p {
+      font-size: 80%;
   }
 }

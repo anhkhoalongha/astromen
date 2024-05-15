@@ -1,0 +1,55 @@
+.product-intro{
+    background-color: #004650;
+    margin-top:10%
+}
+
+.product-intro
+
+
+.product-intro-img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.product-intro-title{
+    margin-bottom: 0%;
+    padding-bottom: 0px;
+}
+
+
+.item-hoisinhhongdo-text {
+    color: white;
+    font-size: large;
+}
+
+.img-production-intro{
+    margin-right: 3%;
+}
+
+.title-logo-product-intro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-text-product-intro-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .img-produc_intro-container {
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .tinhtrang-text-column {
+        width: 100%; /* Chỉ định chiều rộng là 100% khi màn hình nhỏ hơn hoặc bằng 768px */
+    }
+}

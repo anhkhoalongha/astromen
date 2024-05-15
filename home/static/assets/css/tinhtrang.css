@@ -1,0 +1,45 @@
+/* Thiết lập các thuộc tính mặc định */
+.tinhtrang-title {
+    color: white;
+}
+
+.section_tinhtrang {
+    background-color: #004650;
+}
+
+.tinhtrang-abstract {
+    margin-top: 4%;
+    color: white;
+    font-weight: lighter;
+}
+
+.tinhtrang-detail-column {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mod_title_trang {
+    color: white;
+}
+
+.li-tinhtrang-content {
+    color: white;
+}
+
+.tinhtrang-text-column {
+    width: 60%;
+}
+
+/* Thêm điều kiện truy vấn phương tiện cho các kích thước màn hình khác nhau */
+@media screen and (max-width: 768px) {
+    .tinhtrang-detail-column {
+        flex-direction: column; /* Đổi hướng của flex thành cột khi màn hình nhỏ hơn hoặc bằng 768px */
+    }
+
+    .tinhtrang-text-column {
+        width: 100%; /* Chỉ định chiều rộng là 100% khi màn hình nhỏ hơn hoặc bằng 768px */
+    }
+}

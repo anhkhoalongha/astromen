@@ -97,6 +97,8 @@
 	<link rel="stylesheet" href="{% static 'atromen-assets/style.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/slideshow_banner.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/problem_session.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/tinhtrang.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/product_intro.css' %}">
 	<style id="inert-style">
 		[inert] {
 			pointer-events: none;
@@ -119,7 +121,6 @@
 			style="display:none;visibility:hidden"></iframe></noscript>
 	<header>
 		<div class="">
-
 			<div class="header_logo">
 				<div class="container">
 					<div class="row pt_20 pb_20 flex_row_lg header-banner">
@@ -276,35 +277,37 @@
 		</div>
 	</header>
 	<div class="clear"></div>
-	<div id="home_box">
-		<div class="slideshow-container">
-			<div class="mySlides fade">
-				<img class="img-banner-slideshow" src="{% static 'assets/banner/banner-courel-01.jpg' %}">
+	<session class="slideshow-banner">
+		<div id="home_box">
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<img class="img-banner-slideshow" src="{% static 'assets/banner/banner-courel-01.jpg' %}">
+				</div>
+				<div class="mySlides fade">
+					<img class="img-banner-slideshow" src="{% static 'assets/banner/banner-courel-1.png' %}">
+				</div>
+
+				<div class="mySlides fade">
+					<img class="img-banner-slideshow" src="{% static 'assets/banner/banner-courel-2.png' %}">
+				</div>
+
+				<div class="mySlides fade">
+					<img class="img-banner-slideshow" src="{% static 'assets/banner/banner-courel-5.png' %}">
+				</div>
+				<div class="mySlides fade">
+					<img class="img-banner-slideshow" src="{% static 'assets/banner/banner-courel-3-gif.gif' %}">
+				</div>
+
+
+
+				<a class="prev" onclick="plusSlides(-1)">❮</a>
+				<a class="next" onclick="plusSlides(1)">❯</a>
+
+
 			</div>
-			<div class="mySlides fade">
-				<img class="img-banner-slideshow" src="{% static 'assets/banner/banner-courel-1.png' %}">
-			</div>
-
-			<div class="mySlides fade">
-				<img class="img-banner-slideshow" src="{% static 'assets/banner/banner-courel-2.png' %}">
-			</div>
-
-			<div class="mySlides fade">
-				<img class="img-banner-slideshow" src="{% static 'assets/banner/banner-courel-5.png' %}">
-			</div>
-			<div class="mySlides fade">
-				<img class="img-banner-slideshow" src="{% static 'assets/banner/banner-courel-3-gif.gif' %}">
-			</div>
-
-
-
-			<a class="prev" onclick="plusSlides(-1)">❮</a>
-			<a class="next" onclick="plusSlides(1)">❯</a>
-
 
 		</div>
-
-	</div>
+	</session>
 	<session>
 		<div class="problem-container">
 			<div class="title_problem">
@@ -330,73 +333,53 @@
 				<div class="content-problem">
 					<p>luôn là chủ đề nhạy cảm, <br> khiến đàn ông đau đầu</p>
 				</div>
-				<div class="">
+			</div>
+		</div>
+	</session>
+	<session>
+		<div class="section_thattran mt_20 section_tinhtrang">
+			<div class="container">
+				<div class="   ">
+					<h2 class="tinhtrang-title mod_title text-center cl_brand mode_title  pb_10 font_hel_b sz_21 mb_15">
+						TÌNH TRẠNG QUÝ ÔNG
+					</h2>
+					<p class="tinhtrang-abstract">
+						Theo các nghiên cứu từ <a href="https://tamanhhospital.vn/man-duc-nam-o-do-tuoi-nao"><u
+								style="color:red"> Bệnh viện Tâm Anh</u></a>,
+						<u style="color:red">Bệnh viện Đại
+							học Y Hà Nội</u>, vấn đề sinh lý nam giới ngày
+						càng được quan tâm nhiều hơn do ảnh hưởng của lối sống bận rộn và áp lực từ nhiều phía.
+					</p>
+					<div class="row tinhtrang-detail-column">
+						<div class="col-xs-12 col-sm-4 thattran_item tinhtrang-text-column">
+							
+							<h3 class="mod_title_trang">Rối loạn và giảm ham muốn</h3>
+							<div class="intro">
+								<ul>
+									<li class="li-tinhtrang-content">
+										Rối loạn cương dương: Bao gồm khó khăn trong việc đạt được hoặc duy trì cương
+										cứng đủ để có một cuộc giao hợp đầy đủ.
+									</li>
+									<li class="li-tinhtrang-content">
+										Giảm ham muốn tình dục: Do một số yếu tố như thay đổi hormone, lo lắng, mệt mỏi,
+										hoặc các vấn đề về sức khỏe như bệnh tim mạch hoặc bệnh tiểu đường.
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-sm-4 thattran_item">
+							<div class="intro">
+								<img src="{% static 'assets/img/benh-liet-duong-la-gi.jpg' %}" alt="">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-
 		</div>
 	</session>
 
-	<div class="section_thattran mt_20 section_tinhtrang">
-		<div class="container">
-			<div class="   ">
-				<h2 class="mod_title text-center cl_brand mode_title  pb_10 font_hel_b sz_21 mb_15">
-					TÌNH TRẠNG QUÝ ÔNG 
-				</h2>
-
-				<div class="row">
-
-					<div class="col-xs-12 col-sm-4 thattran_item">
-						<h3 class="mod_title_trang">RỐI LOẠN CƯƠNG</h3>
-						<div class="intro">
-							<p>50% đàn ông trên 40 gặp các biểu hiện khác nhau của <b>rối loạn cương</b> ( <a
-									rel="nofollow noreferrer noopener" href="https://pubmed.ncbi.nlm.nih.gov/10693906/"
-									target="_blank">*</a> ), là
-								tình trạng khi có ham muốn tình dục nhưng dương vật không thể cương, cương được
-								nhưng không đủ cứng hoặc cứng nhưng không đủ lâu để thực hiện quan hệ tình dục hoặc
-								mang lại cảm xúc trọn vẹn cho đối tác.</p>
-							<div class="note">(*) The study from Masachusetts university, 2008.</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-4 thattran_item">
-						<h3 class="mod_title_trang">XUẤT TINH SỚM</h3>
-						<div class="intro">
-							<p>Là tình trạng rối loạn xuất tinh của nam giới với biểu hiện là xuất tinh sớm hơn hay
-								trong vòng 2 phút kể từ lúc giao hợp. Khoảng 30% đàn ông trên thế giới ít nhất một
-								vài lần trong đời phải nếm trải "nỗi cay đắng" này.</p>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-4 thattran_item">
-						<h3 class="mod_title_trang">SUY GIẢM SINH LỰC PHÁI MẠNH</h3>
-						<div class="intro">
-							<p>Là tình trạng cơ thể nam giới suy yếu về sức khỏe tinh thần như giảm tập trung, giảm
-								động lực trong cuộc sống, giảm ham muốn tình dục và đi xuống về mặt thể chất như
-								giảm khối cơ, béo bụng, rụng tóc,… và xuất hiện các bệnh lý tim mạch.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--
-	<div class="img_section_thattran">
-		<div class="container">
-			<div class="widget  pb_30 html">
-				<div class="row">
-					<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-						<img loading="lazy" class="img-responsive "
-							src="{% static 'atromen-assets/img_home_thattran.jpg' %}"
-							alt="sâm astromen mới hỗ trợ tăng cường sinh lực phái mạnh" width="790" height="730">
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<div class="section_nguyennhan mt_20">
+	<!-- <div class="section_nguyennhan mt_20">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
@@ -421,7 +404,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
+
+	<!-- 	
 		<div class="row_nguyennhan_item">
 			<div class="container">
 				<div class="row">
@@ -482,59 +467,53 @@
 				<div class="divider"></div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="section_hoisinh mt_20 ">
+	<div class="section_hoisinh mt_20 product-intro ">
 		<div class="container">
 			<div class="widget  pb_30 html">
-				<h2 class="mod_title text-center cl_brand mode_title  pb_10 font_hel_b sz_21 mb_15">
-					astromen MỚI - HỖ TRỢ HỒI SINH PHONG ĐỘ THỜI TRAI TRẺ </h2>
-				<div class="">
-					<div class="row flex_row ">
-						<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 flex_column">
-							<img loading="lazy" class="img-responsive "
-								src="{% static 'atromen-assets/chai_mau-1-1.png' %}" alt="sâm astromen" width="700"
-								height="705">
+				<div class="title-logo-product-intro">
+					<img class="img-production-intro" src="{% static 'assets\img\logoAstromen.jpg' %}" alt="">
+					<!-- <div class="title-text-product-intro-container"> -->
+						<h2
+							class="mod_title text-center cl_brand  pb_10 font_hel_b sz_21 mb_15 mb_10 product-intro-title">
+							BỨC PHÁ GIỚI HẠN - CỨNG CÁP DÀI LÂU
+						</h2>
+					<!-- </div> -->
+				</div>
+				<div class="row flex_row ">
+					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 flex_column img-produc_intro-container">
+						<img loading="lazy" class="img-responsive product-intro-img "
+							src="{% static 'assets/img/hop-thuoc-astromen-bg-white.png' %}" alt="sâm astromen"
+							width="700" height="705">
+					</div>
+					<div class="col-xs-12 col-sm-6 flex_column">
+						<div class="item_hoisinhhongdo">
+							<ul>
+								<li class="item-hoisinhhongdo-text">
+									Không còn tự ti - Chỉ còn tự tin
+								</li>
+
+							</ul>
 						</div>
-						<div class="col-xs-12 col-sm-6 flex_column">
-
+						<div class="item_hoisinhhongdo ">
 							<div class="item_hoisinhhongdo">
-								<div class="title">
-									<h3>Cơ thể sung mãn, thức tỉnh ham muốn</h3>
-								</div>
-								<div style="text-align:justify" class="intro">Hồi sinh vẻ cường tráng cho cơ thể,
-									sinh lực sung mãn và luôn khát khao trải nghiệm những điều tuyệt vời trong cuộc
-									sống riêng tư.</div>
-							</div>
+								<ul>
+									<li class="item-hoisinhhongdo-text">
+										Không còn một đêm giới hạn chỉ có những đêm hạnh phúc vô hạn
+									</li>
 
+								</ul>
+							</div>
+						</div>
+						<div class="item_hoisinhhongdo ">
 							<div class="item_hoisinhhongdo">
-								<div class="title">
-									<h3>Cương cứng mạnh mẽ &amp; bền bỉ</h3>
-								</div>
-								<div style="text-align:justify" class="intro">Chuyện cương cứng sẽ trở nên nhanh
-									chóng, mạnh mẽ và bền bỉ, biến quý ông trở thành những chiến binh dũng mãnh, dẫn
-									dắt mọi cuộc chơi. </div>
+								<ul>
+									<li class="item-hoisinhhongdo-text">
+										Giúp giảm triệu chứng đau lưng mỏi gối, sinh lý yếu do thận kém.
+									</li>
+								</ul>
 							</div>
-
-							<div class="item_hoisinhhongdo">
-								<div class="title">
-									<h3>Vượt qua thử thách “thời gian” </h3>
-								</div>
-								<div style="text-align:justify" class="intro">Thời gian không còn là vấn đề bởi
-									astromen sẽ giúp hỗ trợ cương cứng lâu hơn, kéo dài cuộc yêu đến bất cứ khi nào
-									bạn muốn.</div>
-							</div>
-
-							<div class="item_hoisinhhongdo">
-								<div class="title">
-									<h3>Kiêu hãnh &amp; thăng hoa</h3>
-								</div>
-								<div style="text-align:justify" class="intro">Trả lại sức mạnh và niềm kiêu hãnh của
-									quý ông, cùng cô ấy tận hưởng sự hòa hợp và thăng hoa trong những cảm xúc bất
-									tận. </div>
-							</div>
-
-
 						</div>
 					</div>
 				</div>
@@ -543,7 +522,7 @@
 		</div>
 	</div>
 
-
+	<!-- 
 	<div class="section_tinhchat mt_20 ">
 		<div class="container">
 			<div class="widget  pb_30 html">
