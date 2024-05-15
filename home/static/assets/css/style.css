@@ -1,0 +1,126 @@
+body,
+html {
+    background-color: #044750;
+    width: 100%;
+    max-width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container-body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-header {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.header {
+    background-color: #044750;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 1%;
+    align-items: center;
+}
+
+.logo-img-astro {
+    margin-left: 70%;
+}
+
+.col-buy-cart {
+    display: flex;
+    justify-content: center;
+
+}
+
+.cart-container {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 5%;
+    margin-left: 40%;
+    background-color: white;
+    display: flex;
+    padding-right: 2%;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 30px/30px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.border-cart-round {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+.icon-cart {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-quick-buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-hotline-header {
+    width: 200px;
+    height: auto;
+}
+
+.navbar {
+    background-color: #f10f0b;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.col-2nd-footer h5 {
+    text-align: left;
+    margin-left: 0px;
+}
+
+.list-unstyled li,
+.list-unstyled li a {
+    text-align: left;
+}
+
+/* Footer */
+.footer {
+    margin-top: 5%;
+    border-top: 25px red solid;
+}
+
+.col-footer {
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.col-2nd-footer {
+    margin-top: 8%
+}
+
+.col-footer-3rd {
+    margin-top: 8%;
+}
+
+.logo-img-astro-footer {
+    max-width: 120%;
+    max-height: 120%;
+}
+

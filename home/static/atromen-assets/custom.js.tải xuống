@@ -1,0 +1,657 @@
+// js menu click show sub menu mobile
+jQuery(document).ready(function ($) {
+	//jQuery('.menu_mobile .menu-item-has-children ul').hide();
+	jQuery('.menu_mobile .menu-item-has-children').append('<span class="sub-toggle lv1" > <span class="dropdow_menu_icon" > </span> </span>');
+
+	jQuery('.menu_mobile .menu-item-has-children .menu-item-has-children .lv1').removeClass('lv1').addClass('lv2');
+	jQuery('.navbar-collapse .sub-toggle.lv2').click(function () {
+		var checkElement = $(this).parent('.menu-item-has-children').children('ul.sub-menu').first();
+		var checkParent = $(this).parent().parent();
+		if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+			checkElement.slideUp('normal');
+			$(this).children('i').removeClass('fa-angle-up');
+			$(this).children('i').addClass('fa-angle-down');
+			return false;
+		}
+		if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+			checkParent.find('ul:visible').slideUp('normal');
+			if (checkParent.find(' i').hasClass('fa-angle-up')) {
+				checkParent.find(' i').removeClass('fa-angle-up');
+				checkParent.find('i').addClass('fa-angle-down');
+			}
+			checkElement.slideDown('normal');
+			$(this).children('i').removeClass('fa-angle-down');
+			$(this).children('i').addClass('fa-angle-up');
+			return false;
+		}
+	});
+
+
+	jQuery('.navbar-collapse .sub-toggle.lv1').click(function () {
+		var checkElement = $(this).parent('.menu-item-has-children').children('ul.sub-menu').first();
+		var checkParent = $(this).parent().parent();
+		if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+			checkElement.slideUp('normal');
+			$(this).children('i').removeClass('fa-caret-up');
+			$(this).children('i').addClass('fa-caret-down');
+			return false;
+		}
+		if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+			checkParent.find('ul:visible').slideUp('normal');
+			if (checkParent.find('.sub-toggle  i').hasClass('fa-caret-up')) {
+				checkParent.find('.sub-toggle  i').removeClass('fa-caret-up');
+				checkParent.find('.sub-toggle  i').addClass('fa-caret-down');
+			}
+			checkElement.slideDown('normal');
+			$(this).children('i').removeClass('fa-caret-down');
+			$(this).children('i').addClass('fa-caret-up');
+			return false;
+		}
+
+	});
+
+});
+$(document).ready(function () {
+	$(document).click(function (event) {
+		
+		var clickover = $(event.target);					
+		var openedmenu = $(".wraper_menumobile .navbar-mobile").hasClass("in");
+		//console.log(openedmenu);
+		if (openedmenu === true && !clickover.hasClass("navbar-toggle") && clickover.parents('.navbar-collapse').length == 0) {						
+			$("button.navbar-toggle").click();
+		}
+		
+	});
+});
+
+// js add icon tam giac so xun cho menu desktop neu co sub
+jQuery(document).ready(function ($) {
+	jQuery('#menu-menu-main.menu_deskop > li.menu-item-has-children > a').append('<span class="dropdow_menu_icon" > </span>');
+});
+
+// js đăng ký newleter footer
+jQuery(".submit_from_dk_ebook").click(function () {
+	var EmailNewsletter = jQuery.trim(jQuery('.input_from_dk_ebook').val());
+	var filterEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	if (!filterEmail.test(EmailNewsletter)) {
+		alert('Vui Lòng điền đúng định dạng email!');
+		return false;
+	} else {
+		jQuery.ajax({
+			url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfMk8vftd7lglOkIgm4HhN4yJFALZLEzZebOVMYgZFpt0ShFQ/formResponse',
+			type: 'POST',
+			data: {'entry.1790613948': 'ALipas.com.vn', 'entry.680220096': EmailNewsletter},
+			dataType: 'html',
+			success: function (html) {
+				console.log(html);
+			}
+		});
+		alert('Đăng ký Email thành công!');
+		jQuery('.input_from_dk_ebook').val('');
+		return false;
+	}
+
+	return false;
+});
+// js add popup click cho attr có class youtube
+jQuery(document).ready(function () {
+        jQuery(".youtube").YouTubeModal({autoplay: 0, width: 640, height: 480});
+});		
+
+// js slider brand footer
+jQuery(document).ready(function () {	
+	$("#owl-custome").owlCarousel({
+		autoPlay: 18000,
+		items: 5,
+		itemsDesktop: [1199, 5],
+		itemsDesktopSmall: [979, 4],
+		itemsTablet: [768, 4],
+		itemsMobile: [479, 2],
+		pagination: false,
+		lazyLoad: true,
+		navigation: true
+	});
+});
+
+// js add class crol fix cho menu khi croll
+$(document).ready(function () {
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 81) {
+			$('#mainmenu').addClass("scroll_fix_menu");
+		} else {
+			$('#mainmenu').removeClass("scroll_fix_menu");
+		}
+	});
+});
+// js add target _bland cho tất cả thẻ a trong bài viết chi tiết
+$('#wrap_content_detail_blog').find('a').each(function(){
+	var innerDivId = $(this).attr('target', '_blank');
+});
+
+
+// js validate và submit form contact page contact
+$(document).ready(function () {
+	$("#btnSubmit.btn_submit_send").click(function () {
+
+		value_contact = $(".wpcf7-form #username").val();
+		value_contact = jQuery.trim(value_contact);
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập họ tên");
+			return false;
+		}
+
+		value_contact = $(".wpcf7-form #address").val();
+		value_contact = jQuery.trim(value_contact);
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập địa chỉ");
+			return false;
+		}
+
+		vnf_regex = /((032|033|034|035|036|037|038|039|056|058|059|052|070|076|077|078|079|081|082|083|084|085|086|087|088|089|090|091|092|093|094|095|096|097|098|099)+([0-9]{7})\b)/g;
+		value_contact = $(".wpcf7-form #phone").val();
+		value_contact = jQuery.trim(value_contact);
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập Điện thoại");
+			return false;
+		}
+		if (vnf_regex.test(value_contact) == false) {
+			alert('Số điện thoại của bạn không đúng định dạng!');
+			return false;
+		}
+
+		value_contact = $(".wpcf7-form #title").val();
+		value_contact = jQuery.trim(value_contact);
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập tiêu đề");
+			return false;
+		}
+
+		value_contact = $(".wpcf7-form #content_contact").val();
+		value_contact = jQuery.trim(value_contact);
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập nội dung");
+			return false;
+		}
+		grecaptcha.ready(function () {
+			grecaptcha.execute('6LfxESAlAAAAAEP5-vV38df_s7iP3CoDkey0BZjl', { action: 'contact' }).then(function (token) {
+				var recaptchaResponse = document.getElementById('recaptchaResponse');
+				recaptchaResponse.value = token;
+				var data = jQuery(".contact_box .wpcf7-form").serialize();
+				jQuery.ajax({
+					type: "POST",
+					url: site_url+'/modules/wp-send-salesforce-contact.php',
+					data: data,
+					dataType: "html",
+					success: function (html) {
+						console.log(html);
+						const obj = JSON.parse(html);
+						console.log(obj);
+						if(obj.status==true){
+							alert('Thông tin liên hệ được gửi thành công!')
+							document.getElementById("submit_contact").reset();
+							//window.location.reload(true);
+							return false;
+						}else{
+							alert(obj.mess);
+							return false;
+						}
+					}
+				});
+			});
+		});	
+		return false;
+	});
+	$("#reset_contact").click(function () {
+		resetForm("submit_contact");
+
+
+
+	});
+});
+
+function checkEmail(email) {
+	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	if (!filter.test(email.value)) {
+		return false;
+	}
+	return true;
+}
+function resetForm(id) {
+	$('#' + id).each(function () {
+		this.reset();
+	});
+	return false;
+}
+
+//js đăng ký thông tin form sidebar
+$(document).ready(function () {
+	var filter_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	$("#subscribe_email #btnSubmit").click(function () {
+		
+		var data = jQuery("#subscribe_email").serialize();
+		
+		var vemail = $("#subscribe_email #email").val();
+
+		//alert(checkEmail(vemail));
+		if (vemail.length == 0)
+		{
+			alert("Vui lòng nhập Email");
+			return false;
+		}
+		
+		
+		if (!filter_email.test(vemail)) {
+			alert("Vui lòng nhập đúng định dạng email!");
+			return false;
+		}
+		var gender= $("#subscribe_email #gender").val();
+		
+		if (gender == 0)
+		{
+			alert("Vui lòng chọn giới tính");
+			return false;
+		}
+		var birthday= $("#subscribe_email #birthday").val();
+		
+		if (birthday == 0)
+		{
+			alert("Vui lòng chọn năm sinh");
+			return false;
+		}
+
+		jQuery.ajax({                    
+			type: "POST",
+			url: site_url+'/modules/wp-send-sendy.php',
+			data: data,
+			dataType: "html",
+			success: function (html) {
+				console.log(html);
+				alert('Cám ơn bạn đã đăng ký. Thông tin của bạn đã đăng ký thành công.')
+				document.getElementById("subscribe_email").reset();
+				//window.location.reload(true);
+			}
+		});
+
+		//$("#submit_contact").submit();
+		return false;
+	});
+	$("#reset_contact").click(function () {
+		resetForm("submit_contact");
+		return false;
+	});
+});
+
+// js click button share for post detail
+jQuery(document).ready(function () {
+	jQuery(".click_share").click(function () {
+		var link =  jQuery(this).data('link');
+		window.open(link, '_blank');
+	});
+});
+
+//js change tab page chính sách mua hàng
+$(document).ready(function(){
+	$('.title_tab li').first().children("a.title_tab_chinhsachmuahang").addClass('active');
+	$('.wrapper_tab .tab_chinhsachmuahang').first().addClass('active');
+	$(".title_tab_chinhsachmuahang").click(function(){
+		$(".title_tab_chinhsachmuahang").removeClass('active');
+		$(".tab_chinhsachmuahang").removeClass('active');
+		var tab=$(this).attr("href");
+		
+		$(this).addClass('active');
+		$(tab).addClass('active');
+		return false;
+	});	
+});		
+
+//js form oder for page order
+jQuery('.quantity').each(function () {
+	var spinner = jQuery(this),
+			input = spinner.find('input[type="number"]'),
+			btnUp = spinner.find('.quantity-up'),
+			btnDown = spinner.find('.quantity-down'),
+			min = input.attr('min'),
+			max = input.attr('max');
+
+	btnUp.click(function () {
+		var oldValue = parseFloat(input.val());
+		if (oldValue >= max) {
+			var newVal = oldValue;
+		} else {
+			var newVal = oldValue + 1;
+		}
+		spinner.find("input").val(newVal);
+		spinner.find("input").trigger("change");
+	});
+
+	btnDown.click(function () {
+		var oldValue = parseFloat(input.val());
+		if (oldValue <= min) {
+			var newVal = oldValue;
+		} else {
+			var newVal = oldValue - 1;
+		}
+		spinner.find("input").val(newVal);
+		spinner.find("input").trigger("change");
+	});
+
+});
+
+jQuery(document).ready(function ($) {
+	$(document).ready(function () { 
+		if( typeof price_30 == 'undefined' ){  price_30=0;}
+		if(typeof  price_60 == 'undefined'){  price_60=0;}
+		var string_price_30 = String(price_30).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+		var string_price_60 = String(price_60).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+		$('.price_30').html(string_price_30);
+		$('.price_60').html(string_price_60);
+		$('.input_qty_30').attr('data-price', price_30);
+		$('.input_qty_60').attr('data-price', price_60);
+		$('.input_qty').change(function () {
+			update_formoder();
+		});
+		update_formoder();
+		
+		$("#form_muahang .btn_submit ").click(function () {
+			var data = jQuery("#form_muahang .wpcf7-form").serialize();
+			var name = $(".form_muahang .input_name").val();
+			var phone = $(".form_muahang .input_phone").val();
+			var qty_30 = $(".form_muahang .input_qty_30").val();
+			var qty_60 = $(".form_muahang .input_qty_60").val();
+			var captcha = $('#recaptcha'),response = grecaptcha.getResponse();
+			var vnf_regex = /(([0-9]{8})\b)/g;
+			if (name.length == 0)
+			{
+				alert("Vui lòng nhập họ tên");
+				return false;
+			}
+			if (phone.length == 0)
+			{
+				alert("Vui lòng nhập số điện thoại");
+				return false;
+			}
+			if (vnf_regex.test(phone) == false) {
+				alert("Vui lòng nhập đúng số điện thoại!");
+				return false;
+			}
+			if (qty_30 == 0 && qty_60 == 0) {
+				alert("Vui lòng nhập Số lượng sản phầm mún mua!");
+				return false;
+			}
+			if (!document.getElementById('checkbox_dieukhoan').checked) {
+				alert("Vui lòng xác nhận đống ý điều khoản!");
+				return false;
+			}
+			if (response.length === 0) {
+				alert("Vui lòng Điền Captcha!");
+				return false;
+			}
+			jQuery('body').addClass('load');
+			
+			jQuery.ajax({
+				type: "POST",
+				url: site_url+'/modules/wp-send-salesforce-order.php',
+				data: data,
+				dataType: "html",
+				success: function (html) {
+					console.log(html);
+					const obj = JSON.parse(html);
+					console.log(obj);
+					if(obj.status==true){
+					
+						window.location.href =thanksyoupage;
+						//window.location.reload(true);
+						return false;
+					}else{
+						alert(obj.mess);
+						jQuery('body').removeClass('load');
+                        return false;
+					}
+					
+				}
+			});
+			return false;
+		});
+
+	});
+	function update_formoder() {
+		var tongstring = 0;
+		var thanhtien = 0;
+		$('.input_qty').each(function () {
+			if (parseInt($(this).val()) > 0) {
+				thanhtien = thanhtien + (parseInt($(this).val()) * parseInt($(this).attr('data-price')))
+			}
+		});
+		var phiship = 0;
+		if (thanhtien > 0) {
+			phiship = phiship_config;
+		}
+		var thanhtienstring = String(thanhtien);
+		thanhtienstring = thanhtienstring.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+		var tong = thanhtien + phiship;
+		tongstring = String(tong);
+		tongstring = tongstring.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+		$('.total_price').val(tongstring);
+		return false;
+	}
+});
+
+/* js for home page */
+$(document).ready(function () {
+	$(".wrap_row_title_cach .cach_item").first().addClass('active');
+	$(".wrap_content_cach .content_cach_item").first().addClass('active'); 
+	$(".cach_item").click(function () {
+		$(".cach_item").removeClass('active');
+		$(".content_cach_item").removeClass('active'); 
+		$(this).addClass('active');
+		var datashow=$(this).attr('data-show');
+		$(datashow).addClass('active'); 
+	});	
+});
+// js form hỏi đáp home page
+$(document).ready(function () {
+	var filter_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	$(".from_top_question_home #btnSubmit").click(function () {
+		var data = jQuery(".from_top_question_home").serialize();
+		var value_contact = $(".from_top_question_home #name").val();
+		 vnf_regex = /^(?=.*\d)(032|033|034|035|036|037|038|039|056|058|059|052|070|076|077|078|079|081|082|083|084|085|086|087|088|089|090|091|092|093|094|095|096|097|098|099)\d{7}\b$/g;
+		var value_phone = $("#phone").val();
+		var value_contact = jQuery.trim(value_contact);
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập họ tên");
+			return false;
+		}
+
+		if (value_phone.length == 0)
+		{
+			alert("Vui lòng nhập Điện thoại");
+			return false;
+		}
+		if (vnf_regex.test(value_phone) == false) {
+			alert('Số điện thoại của bạn không đúng định dạng!');
+			return false;
+		}
+		value_contact = $(".from_top_question_home #title").val();
+		value_contact = jQuery.trim(value_contact);
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập tiêu đề");
+			return false;
+		}
+
+		value_contact = $(".from_top_question_home #content_contact").val();
+		value_contact = jQuery.trim(value_contact);
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập nội dung");
+			return false;
+		}
+		grecaptcha.ready(function () {
+			grecaptcha.execute('6LfxESAlAAAAAEP5-vV38df_s7iP3CoDkey0BZjl', { action: 'contact' }).then(function (token) {
+				var recaptchaResponse = document.getElementById('recaptchaResponse');
+				recaptchaResponse.value = token;
+				jQuery.ajax({                    
+				type: "POST",
+				url: site_url+'/modules/wp-hoidap-insert.php',
+				data: data,
+				dataType: "html",
+				success: function (html) {
+					const obj = JSON.parse(html);
+					console.log(obj);
+					if(obj.status==true){
+					alert('Câu hỏi của bạn đã được gửi đến chuyên gia, \n chúng tôi sẽ trả lời trong thời gian sớm nhất.')
+					document.getElementById("from_top_question_home").reset();
+					return false;
+					}else{
+						alert(obj.mess);
+                        return false;
+					}
+					//window.location.reload(true);
+				}
+			});
+		});
+	});
+
+		//$("#submit_contact").submit();
+		return false;
+	});
+	$("#reset_contact").click(function () {
+		resetForm("submit_contact");
+		return false;
+	});
+});
+
+jQuery(document).ready(function () {
+	jQuery("#news_highlight_homepage").owlCarousel({
+		autoPlay: 3967 ,
+		items: 4,
+		itemsDesktop: [1199, 2],
+		itemsDesktopSmall: [979, 2],
+		itemsTablet: [768, 2],
+		itemsMobile: [479, 1],
+		pagination: false,
+		navigation: true
+	});
+});
+
+jQuery(document).ready(function () {
+	jQuery("#tintucmoi").owlCarousel({
+		autoPlay: 3639 ,
+		items: 4,
+		itemsDesktop: [1199, 2],
+		itemsDesktopSmall: [979, 2],
+		itemsTablet: [768, 2],
+		itemsMobile: [479, 1],
+		pagination: false,
+		navigation: true
+	});
+});
+
+$(document).ready(function() {
+	
+    $("#owl-slidehome").owlCarousel({
+        autoPlay: 18000,
+        stopOnHover: true,
+        navigation: false,
+        paginationSpeed: 1000,
+        goToFirstSpeed: 2000,
+        singleItem: true,
+        autoHeight: true,
+        transitionStyle: "fade",
+    });
+	$("#ykienchuyengiahome").owlCarousel({
+        autoPlay: 3000,
+        stopOnHover: true,
+        navigation : true,
+        paginationSpeed: 1000,
+        goToFirstSpeed: 2000,
+        singleItem: true,
+        autoHeight: false,
+        transitionStyle: "fade",
+        pagination:false,
+    });
+});	
+/* end js for home page */
+
+
+/* js submit form hoi dap in post hoi dap chi tiet */
+
+$(document).ready(function () {
+	var filter_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	$(".from_question #btnSubmit").click(function () {
+		var data = jQuery(".from_question").serialize();
+		var value_contact = $(".from_question #name").val();
+		var value_contact = jQuery.trim(value_contact);
+		vnf_regex = /^(?=.*\d)(032|033|034|035|036|037|038|039|056|058|059|052|070|076|077|078|079|081|082|083|084|085|086|087|088|089|090|091|092|093|094|095|096|097|098|099)\d{7}\b$/g;
+		var value_phone = $("#phone").val();
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập họ tên");
+			return false;
+		}
+
+		vemail = $(".from_question #email").val();
+		//alert(checkEmail(vemail));
+		if (value_phone.length == 0)
+		{
+			alert("Vui lòng nhập Điện thoại");
+			return false;
+		}
+		if (vnf_regex.test(value_phone) == false) {
+			alert('Số điện thoại của bạn không đúng định dạng!');
+			return false;
+		}
+		value_contact = $(".from_question #title").val();
+		value_contact = jQuery.trim(value_contact);
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập tiêu đề");
+			return false;
+		}
+
+		value_contact = $(".from_question #content_contact").val();
+		value_contact = jQuery.trim(value_contact);
+		if (value_contact.length == 0)
+		{
+			alert("Vui lòng nhập nội dung");
+			return false;
+		}
+		grecaptcha.ready(function () {
+			grecaptcha.execute('6LfxESAlAAAAAEP5-vV38df_s7iP3CoDkey0BZjl', { action: 'contact' }).then(function (token) {
+				var recaptchaResponse = document.getElementById('recaptchaResponse');
+				recaptchaResponse.value = token;
+				jQuery.ajax({                    
+				type: "POST",
+				url: site_url+'/modules/wp-hoidap-insert.php',
+				data: data,
+				dataType: "html",
+				success: function (html) {
+					const obj = JSON.parse(html);
+					console.log(obj);
+					if(obj.status==true){
+					alert('Câu hỏi của bạn đã được gửi đến chuyên gia, \n chúng tôi sẽ trả lời trong thời gian sớm nhất.')
+					document.getElementById("from_question").reset();
+					return false;
+					}else{
+						alert(obj.mess);
+						return false;
+					}
+				}
+			});
+		});		
+	});
+
+		//$("#submit_contact").submit();
+		return false;
+	});
+	$("#reset_contact").click(function () {
+		resetForm("submit_contact");
+		return false;
+	});
+});
