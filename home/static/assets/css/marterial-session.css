@@ -1,0 +1,83 @@
+.marterial{
+    margin-bottom: 50%;
+    margin-top:5%;
+}
+
+.title-logo-product-intro{
+    margin-bottom: 4%;
+}
+
+.intro-session-marterial{
+    margin-top:7%;
+    margin-bottom: 4%;
+}
+
+.session-marterial-container{
+    background-color: #004650;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-1-marterial {
+    /* background-color: aliceblue; */
+    width: 80%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-1-marterial{
+    width: 35%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.marterial-content{
+    width: 57%;
+}
+
+.col-2-marterial{
+    width: 15%;
+}
+
+.img-marterial{
+    border-radius: 50%;
+    border: solid 1px #e54a2e;
+    scale: 0.9;
+}
+.astromen-product-box{
+    scale: 1.6;
+    border: #004650;
+    position: relative;
+    right: 16%;
+}
+
+.marterial-img-container{
+    margin:0px;
+    padding:0px;
+    width: 30%;
+    padding:0px;
+}
+
+@media screen and (max-width: 768px) {
+    .row-1-marterial {
+        flex-direction: column;
+    }
+
+    .astromen-product-box{
+        display: none;
+    }
+
+    .col-1-marterial{
+        width: 100%;
+    }
+}

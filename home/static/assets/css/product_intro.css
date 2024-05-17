@@ -1,6 +1,6 @@
 .product-intro{
     background-color: #004650;
-    margin-top:10%
+    margin-top:5%
 }
 
 .product-intro
@@ -35,6 +35,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 4%;
 }
 
 .title-text-product-intro-container{
@@ -43,13 +44,26 @@
     align-items: center;
 }
 
+.intro-img-container{
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 768px) {
     .img-produc_intro-container {
         margin-bottom: 5%;
         margin-top: 5%;
+        padding: 2%;
     }
 
     .tinhtrang-text-column {
         width: 100%; /* Chỉ định chiều rộng là 100% khi màn hình nhỏ hơn hoặc bằng 768px */
+    }
+
+    .thattran_item{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 3%;
     }
 }

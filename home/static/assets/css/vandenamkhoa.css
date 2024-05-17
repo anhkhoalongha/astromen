@@ -1,0 +1,80 @@
+.problem-detail_title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.vande-title {
+    width: 20%;
+    height: auto;
+    background-color: red;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px/20px;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.roiloan-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.roiloan-text-container {
+    width: 40%;
+}
+
+#title-roiloan {
+    font-weight: bolder;
+
+}
+
+.img-roiloan{
+    width: 100%;
+}
+
+.img-roiloan-container{
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .problem-detail_title-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0%;
+    }
+
+    .vande-title {
+        width: auto;
+        height: auto;
+        background-color: red;
+        text-align: center;
+        padding: 20px;
+        border-radius: 20px/20px;
+        margin-top: 2%;
+    }
+
+    .roiloan-text-container{
+        width: 85%;
+
+    }
+
+    #title-roiloan {
+        font-weight: bolder;
+        width:90%;
+    }
+
+}

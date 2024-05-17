@@ -18,11 +18,11 @@
   margin-bottom: 2%;
 }
 
-.title_problem > p {
+.title_problem>p {
   font-size: 150%;
 }
 
-.problem-container > .cungvamem {
+.problem-container>.cungvamem {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,13 +33,13 @@
   flex-wrap: wrap;
 }
 
-.cungvamem > .prolem-text {
+.cungvamem>.prolem-text {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.cungvamem > .va {
+.cungvamem>.va {
   margin-left: 5%;
   margin-right: 5%;
   display: flex;
@@ -47,32 +47,34 @@
   flex-wrap: wrap;
 }
 
-.cungvamem > .cung > p, 
-.cungvamem > .mem > p {
-  font-size: 10vw; /* 10% of viewport width */
+.cungvamem>.cung>p,
+.cungvamem>.mem>p {
+  font-size: 10vw;
+  /* 10% of viewport width */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.cungvamem > .va > p {
-  font-size: 4vw; /* 4% of viewport width */
+.cungvamem>.va>p {
+  font-size: 4vw;
+  /* 4% of viewport width */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.cungvamem > .cung > p {
+.cungvamem>.cung>p {
   color: #004750;
   font-weight: bolder;
 }
 
-.cungvamem > .mem > p {
+.cungvamem>.mem>p {
   font-weight: bolder;
 }
 
-.cungvamem > .mem > p, 
-.cungvamem > .va > p {
+.cungvamem>.mem>p,
+.cungvamem>.va>p {
   color: #e8500d;
 }
 
-.cungvamem > .va {
+.cungvamem>.va {
   margin-bottom: 2%;
 }
 
@@ -96,62 +98,78 @@
   margin-bottom: 15%;
 }
 
-.content-problem > p {
+.content-problem>p {
   font-size: 150%;
   color: black;
 }
 
 @media (max-width: 768px) {
-  .cungvamem > .cung > p, 
-  .cungvamem > .mem > p {
-      font-size: 20vw; /* Adjust the font size for smaller screens */
+
+  .cungvamem>.cung>p,
+  .cungvamem>.mem>p {
+    font-size: 20vw;
+    /* Adjust the font size for smaller screens */
   }
 
-  .cungvamem > .va > p {
-      font-size: 8vw; /* Adjust the font size for smaller screens */
+  .cungvamem>.va>p {
+    font-size: 8vw;
+    /* Adjust the font size for smaller screens */
   }
-  .content-problem{
+
+  .content-problem {
     width: 100%;
   }
-  .content-problem > p {
-      font-size: 120%;
+
+  .content-problem>p {
+    font-size: 120%;
+  }
+}
+
+@media (max-width: 720px) {
+  .content-problem {
+    margin-top: 0px;
   }
 }
 
 @media (max-width: 480px) {
-  .cungvamem > .cung > p, 
-  .cungvamem > .mem > p {
-      font-size: 30vw; /* Adjust the font size for smaller screens */
+
+  .cungvamem>.cung>p,
+  .cungvamem>.mem>p {
+    font-size: 30vw;
+    /* Adjust the font size for smaller screens */
   }
 
-  .cungvamem > .cung > p {
+  .cungvamem>.cung>p {
     margin-top: 11%;
   }
 
-  .cungvamem > .va > p {
-      font-size: 12vw; /* Adjust the font size for smaller screens */
+  .cungvamem>.va>p {
+    font-size: 12vw;
+    /* Adjust the font size for smaller screens */
   }
 
-  .content-problem > p {
-      font-size: 100%;
+  .content-problem>p {
+    font-size: 100%;
   }
 }
 
 @media (max-width: 320px) {
-  .cungvamem > .cung > p, 
-  .cungvamem > .mem > p {
-      font-size: 35vw; /* Adjust the font size for very small screens */
+
+  .cungvamem>.cung>p,
+  .cungvamem>.mem>p {
+    font-size: 35vw;
+    /* Adjust the font size for very small screens */
   }
 
-  .cungvamem > .cung > p {
+  .cungvamem>.cung>p {
     margin-top: 15%;
   }
 
-  .cungvamem > .va > p {
-      font-size: 15vw; 
+  .cungvamem>.va>p {
+    font-size: 15vw;
   }
 
-  .content-problem > p {
-      font-size: 80%;
+  .content-problem>p {
+    font-size: 80%;
   }
 }

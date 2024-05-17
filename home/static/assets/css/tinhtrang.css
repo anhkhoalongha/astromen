@@ -33,13 +33,11 @@
     width: 60%;
 }
 
-/* Thêm điều kiện truy vấn phương tiện cho các kích thước màn hình khác nhau */
 @media screen and (max-width: 768px) {
     .tinhtrang-detail-column {
-        flex-direction: column; /* Đổi hướng của flex thành cột khi màn hình nhỏ hơn hoặc bằng 768px */
+        flex-direction: column; 
     }
-
     .tinhtrang-text-column {
-        width: 100%; /* Chỉ định chiều rộng là 100% khi màn hình nhỏ hơn hoặc bằng 768px */
+        width: 100%; 
     }
 }
