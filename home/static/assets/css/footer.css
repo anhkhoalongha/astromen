@@ -33,13 +33,13 @@ footer{
     width: 100%;
     margin-bottom: 5%;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
 
 }
 
 .li-footer-item-final{
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
 }
 
 

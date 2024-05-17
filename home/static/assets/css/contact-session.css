@@ -1,0 +1,23 @@
+.contact-form_session-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.img-product-container{
+    display: flex;
+    flex-direction: row;
+    flex-direction: center;
+    align-items: center;
+}
+
+.contact-form-container{
+    background-color: #e54a2e;
+}

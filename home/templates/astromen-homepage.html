@@ -103,6 +103,7 @@
 	<link rel="stylesheet" href="{% static 'assets/css/factor-session.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/daulungmoigoi.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/blog_session.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/contact_session.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/footer.css' %}">
 	<script src="https://kit.fontawesome.com/9105571157.js" crossorigin="anonymous"></script>
 	<style id="inert-style">
@@ -192,8 +193,7 @@
 													href="https://astromen.com.vn/dat-hang-truc-tuyen.html">VẤN ĐỀ NAM
 													KHOA</a>
 											</li>
-											<li id="menu-item-7500"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7500">
+											<li id="menu-item-7500" class="">
 												<a href="https://astromen.com.vn/benh-ly-nam-khoa.html">SỨC KHỎE & ĐỜI
 													SỐNG</a>
 											</li>
@@ -351,7 +351,7 @@
 		<div class="section_thattran mt_20 section_tinhtrang">
 			<div class="container">
 				<div class="   ">
-					<h2 class="tinhtrang-title mod_title text-center cl_brand mode_title  pb_10 font_hel_b sz_21 mb_15">
+					<h2 class="tinhtrang-title mod_title text-center cl_brand mode_title  pb_10    sz_21 mb_15">
 						TÌNH TRẠNG QUÝ ÔNG
 					</h2>
 					<p class="tinhtrang-abstract">
@@ -398,8 +398,7 @@
 					<div class="title-logo-product-intro" style="margin-bottom: 4%;">
 						<img class="img-production-intro" src="{% static 'assets\img\logoAstromen.jpg' %}" alt="">
 						<!-- <div class="title-text-product-intro-container"> -->
-						<h2
-							class="mod_title text-center cl_brand  pb_10 font_hel_b sz_21 mb_15 mb_10 product-intro-title">
+						<h2 class="mod_title text-center cl_brand  pb_10    sz_21 mb_15 mb_10 product-intro-title">
 							BỨC PHÁ GIỚI HẠN - CỨNG CÁP DÀI LÂU
 						</h2>
 						<!-- </div> -->
@@ -497,7 +496,7 @@
 		<div class="title-logo-product-intro intro-session-marterial">
 			<img class="img-production-intro" src="{% static 'assets\img\logoAstromen.jpg' %}" alt="">
 			<!-- <div class="title-text-product-intro-container"> -->
-			<h2 class="mod_title text-center cl_brand  pb_10 font_hel_b sz_21 mb_15 mb_10 product-intro-title">
+			<h2 class="mod_title text-center cl_brand  pb_10    sz_21 mb_15 mb_10 product-intro-title">
 				BỨC PHÁ GIỚI HẠN - CỨNG CÁP DÀI LÂU
 			</h2>
 			<!-- </div> -->
@@ -1009,7 +1008,7 @@
 				<div class="w3-border">
 					<div class="w3-grey" style="height:24px;width:50%">Bài viết mới</div>
 				</div>
-				
+
 				<div class="list-blog-container">
 					<ul>
 						<li><a href="">Khám phá bí mật cải thiện sinh lý nam giới </a>
@@ -1032,6 +1031,31 @@
 					</ul>
 				</div>
 			</div>
+		</div>
+	</session>
+
+	<session class="contact-form">
+		<div class="contact-form_session-container">
+			<form action="">
+				<div class="contact-form-container">
+					<div>
+						<input type="text" name="" id="">
+					</div>
+					<div>
+						<input type="text" name="" id="">
+						
+					</div>
+					<span>Bạn đang gặp vấn đề gì?</span>
+					<ul>
+						<li>Rối loạn cương dương</li>
+						<li>Xuất tinh sớm</li>
+						<li>Suy giảm sinh lực phái mạnh(Giảm ham muốn)</li>
+						<li>Đau lưng, mỏi gối, suy thận</li>
+						<li>Các vấn đề khác</li>
+					</ul>
+				</div>
+			</form>
+			<div class="img-product-container"></div>
 		</div>
 	</session>
 
@@ -1080,7 +1104,10 @@
 						<li class="li-footer-item">
 							<a href="#!" class="text-white">Miễn trừ trách nhiệm</a>
 						</li>
-						<li class="li-footer-item">
+						<li style="
+						flex-direction: column;
+						align-items: flex-start;
+					" class="li-footer-item li-footer-item-final">
 							<b>LIÊN KẾT VỚI CHÚNG TÔI</b>
 							<a href="https://www.astahealthcare.com">www.astahealthcare.com</a>
 						</li>
