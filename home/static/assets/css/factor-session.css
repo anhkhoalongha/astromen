@@ -1,0 +1,128 @@
+.factor-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.store-intro_title-text{
+    margin-top: 4%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.item-factor-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.midle-factor{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.item-factor{
+    display: flex;
+    flex-direction: column;
+    width: 14%;
+    color:white;
+}
+
+.text-item-factor{
+    text-align: center;
+}
+
+.img-item-factor{
+    max-width: 100%;
+}
+
+.xuattinhsom-container{
+    width: 20%;
+}
+
+.xuattinhsom-text-container-responsive{
+    display: none;
+}
+.xuattinhsom-text-container{
+    height: 100%;
+    margin:0px;
+}
+
+.xuattinhsom-title{
+    text-align: center;
+    font-size: 150%;
+}
+
+.item-xuattinhsom-factor{
+    margin-right: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    .item-factor-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item-factor{
+        justify-content: center;
+    }
+    .midle-factor{
+        margin: 0px;
+    }
+
+    .item-factor{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+    }
+
+    .img-item-factor{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1%;
+        max-width: 100%;
+    }
+    .text-item-factor{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .responsive{
+        display: flex;
+    }
+
+    .roiloan_container{
+       margin-top: 8%;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       margin-left: 2%;
+    }
+
+    #title-roiloan{
+        text-align: center;
+        font-size: 150%;
+        margin-top: 8%;
+        margin-left: 5%;
+    }
+
+   .item-xuattinhsom-factor{
+    margin: 0px;
+   }
+}

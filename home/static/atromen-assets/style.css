@@ -8139,7 +8139,9 @@ div.embed-responsive iframe {
     }
 }
 
-.menu_m ul.dropdown-menu li.order_menu_mobile a {}
+.text-align-center{
+    text-align: center;
+}
 
 .menu_m ul.dropdown-menu li.order_menu_mobile a span {
     font-size: 0px;
