@@ -1034,29 +1034,42 @@
 		</div>
 	</session>
 
-	<session class="contact-form">
-		<div class="contact-form_session-container">
-			<form action="">
-				<div class="contact-form-container">
-					<div>
-						<input type="text" name="" id="">
+	<session class="contact-form-session">
+		<div class="contact-session-container">
+			<div class="text-contact-title">Đặt câu hỏi để nhận tư vấn từ chuyên gia
+			</div>
+			<div class="contact-form_session-container">
+				<form class="form-contact" action="">
+					<div class="contact-form-container">
+						<input type="text" name="" id="" placeholder="Họ và tên của bạn">
+						<input type="text" name="" id="" placeholder="Điện thoại">
+	
+						<span>Bạn đang gặp vấn đề gì?</span>
+						<ul>
+							<li>Rối loạn cương dương</li>
+							<li>Xuất tinh sớm</li>
+							<li>Suy giảm sinh lực phái mạnh(Giảm ham muốn)</li>
+							<li>Đau lưng, mỏi gối, suy thận</li>
+							<li>Các vấn đề khác</li>
+						</ul>
+						<input type="text" name="" id="content-contact" placeholder="Nội dung">
+						<div class="btn-panel">
+							<div>
+								<button type="button">Gửi câu hỏi</button>
+							</div>
+							<div>
+								<button type="button">Tư vấn miễn cước</button>
+							</div>
+						</div>
 					</div>
-					<div>
-						<input type="text" name="" id="">
-						
-					</div>
-					<span>Bạn đang gặp vấn đề gì?</span>
-					<ul>
-						<li>Rối loạn cương dương</li>
-						<li>Xuất tinh sớm</li>
-						<li>Suy giảm sinh lực phái mạnh(Giảm ham muốn)</li>
-						<li>Đau lưng, mỏi gối, suy thận</li>
-						<li>Các vấn đề khác</li>
-					</ul>
+				</form>
+				<div class="contact-form-container img-contact-session">
+					<img class="img-product-contact" src="{% static 'assets/img/astromen-red-bg.png' %}" alt="">
 				</div>
-			</form>
-			<div class="img-product-container"></div>
+			</div>
 		</div>
+		
+		
 	</session>
 
 
@@ -1131,7 +1144,7 @@
 			</div>
 	</footer>
 
-	<div class="footer_message hidden-lg hidden-md hidden-sm pt_5 pb_5">
+	<!-- <div class="footer_message hidden-lg hidden-md hidden-sm pt_5 pb_5">
 		<div class="row flex_row_xs">
 			<div class=" col-xs-5 col-xs-offset-1 flex_column_xs ">
 				<a href="https://astromen.com.vn/dat-hang-truc-tuyen.html">
@@ -1150,13 +1163,14 @@
 				</a>
 			</div>
 		</div>
-	</div>
+	</div> -->
+	<!-- 	
 	<div class="oder_fix  hidden-xs">
 		<a class="icon_order_left" href="https://astromen.com.vn/dat-hang-truc-tuyen.html" target="_blank"
 			title="đặt hàng">
 			<img loading="lazy" alt="đặt hàng" class="img-responsive"
 				src="{% static 'atromen-assets/icon_order_mobi.png' %}" width="38" height="140"></a>
-	</div>
+	</div> -->
 
 
 

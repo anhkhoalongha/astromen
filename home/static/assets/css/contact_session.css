@@ -1,0 +1,134 @@
+.contact-session-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-contact-title{
+    margin-top: 10%;
+    margin-bottom: 3%;
+    font-size: 130%;
+    font-weight: bolder;
+    color: white;
+}
+
+.contact-form-session{
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact-title{
+    
+    margin-top: 5%;
+}
+.contact-form_session-container{
+    width: 119%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-contact{
+    width: 37%;
+}
+
+.contact-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    background-color: #e54a2e;
+    border-radius: 20px/20px;
+    color: white;
+}
+
+.img-product-container{
+    display: flex;
+    flex-direction: row;
+    flex-direction: center;
+    align-items: center;
+}
+
+
+.contact-form-container > ul {
+    list-style-type: none;
+}
+.contact-form-container > ul > li {
+    margin-left: 20%;
+}
+
+
+.img-contact-session{
+    max-width: 28%;
+    position: relative;
+    left: 20px;
+}
+
+.contact-form-container > div > input, button {
+    border-radius: 15px/15px;
+    border: none; 
+    margin-bottom: 1%;
+    color: black;
+    padding: 5%;
+}
+
+.contact-form-container > div > input{
+    width: 80%; 
+}
+
+.contact-form-container > input{
+    border-radius: 15px/15px;
+    border: none; 
+    margin-bottom: 1%;
+    color: black;
+    width: 80%;
+}
+
+#content-contact{
+    height: 100px;
+}
+
+.btn-panel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-panel > div >button {
+    height: 60px;
+    margin: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    .img-product-container{
+        display: flex;
+        flex-direction: column;
+        flex-direction: center;
+        align-items: center;
+    }
+
+    .contact-form_session-container{
+        flex-direction: column;
+    }
+
+    .form-contact{
+        width: 100%;
+    }
+    .img-contact-session{
+        margin-top: 3%;
+        max-width: 100%;
+        padding: 0px;
+        left: 0px;
+        border-radius: 20px/20px;
+    }
+
+    .img-product-contact{
+        border-radius: 20px/20px;
+    }
+
+    .contact-form_session-container{
+        max-width: 90%;
+    }
+}
